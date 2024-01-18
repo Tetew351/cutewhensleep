@@ -1,0 +1,141 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 60px;
+    width: 200px;
+    background-color: #1c87c9;
+    transform: translate(-50%,-50%);
+    -webkit-border-radius: 60px;
+    border-radius: 30px;
+    border: none;
+    color: #eeeeee;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: arial black;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size:400%;
+    font-weight:bold;
+    z-index: 1;
+  }
+  
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: arial black;
+    text-align: center;
+    text-decoration: none;
+    line-height: 60px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    box-sizing: border-box;
+    cursor:pointer;
+    font-weight:bold;
+
+z-index: 1;
+}
+
+.scene
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.moon
+{
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.moon:after
+{
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#111425,#3751e0);
+    background-attachment: fixed;
+}
+
+.forest
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transform: scale(1.2);
+}
+
+.scene i
+{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: translate(0);
+    }
+    10%,90%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+}
+
+@keyframes glowing {
+    0% {
+      background-color: #0582a8;
+      box-shadow: 0 0 3px #8e56e7;
+    }
+    50% {
+      background-color: #3f19e8;
+      box-shadow: 0 0 10px #19b8e8;
+    }
+    100% {
+      background-color: #2805a8;
+      box-shadow: 0 0 3px #0572a8;
+    }
+  }
+  .button
+  {
+    animation: glowing 1300ms infinite;
+  }

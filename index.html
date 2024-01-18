@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have A Nice Day</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <a class="button" href="https://tetew351.github.io/apaanya.github.io/">Click here!</a>
+    <p>Ur eye so cute when u wakeup from the sleep</p>
+    <div>
+        <div class="scene">
+        <div class="moon"></div> 
+        <img src="forest.png" class = "forest">
+    </div>
+    <script type="text/javascript">
+        function stars(){
+            let count = 500;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i<count){
+                let star = document.createElement("i")
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.floor(Math.random() * window.innerHeight);
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+                star.style.left = x+'px';
+                star.style.top = y+'px';
+                star.style.width = 1+size+'px';
+                star.style.height = 1+size+'px';
+
+                star.style.animationDuration = 5+duration+'s';
+                star.style.animationDelay = duration+'s';
+
+                scene.appendChild(star);
+                i++
+            }
+        }
+        stars();
+      </script>
+</body>
+</html>
